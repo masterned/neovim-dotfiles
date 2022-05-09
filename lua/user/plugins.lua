@@ -30,18 +30,20 @@ if not status_ok then
 end
 
 -- Packer popup window
---packer.init {
-  --display = {
-    --open_fn = function()
-      --return require("packer.util").float { border = "rounded" }
-    --end,
-  --},
---}
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"  -- have packer manage itself
   --use "nvim-lua/popup.nvim"   -- implement popup
   use "nvim-lua/plenary.nvim"   -- lua helper functions
+
+  use "folke/tokyonight.nvim"
 
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then

@@ -16,7 +16,7 @@ local options =
 	, splitbelow = true
 	, splitright = true
 	, swapfile = false
-  --, termguicolors = true
+  , termguicolors = true
 	, timeoutlen = 1000
 	, undofile = true
 	, updatetime = 300
@@ -24,7 +24,7 @@ local options =
 	, expandtab = true
 	, shiftwidth = 2
 	, tabstop = 2
-  --, cursorline = true
+  , cursorline = true
 	, number = true
 	, relativenumber = false
 	, numberwidth = 4
@@ -32,7 +32,7 @@ local options =
 	, wrap = false
 	, scrolloff = 8
 	, sidescrolloff = 8
-  --, guifont = "monospace:h17"
+  , guifont = "Furacode Mono:h17"
   }
 
 for k, v in pairs(options) do
