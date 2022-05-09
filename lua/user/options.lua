@@ -32,7 +32,7 @@ local options =
 	, wrap = false
 	, scrolloff = 8
 	, sidescrolloff = 8
-  , guifont = "Furacode Mono:h17"
+  , guifont = "FiraCode Nerd Font"
   }
 
 for k, v in pairs(options) do

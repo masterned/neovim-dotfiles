@@ -39,11 +39,23 @@ packer.init {
 }
 
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim"  -- have packer manage itself
-  --use "nvim-lua/popup.nvim"   -- implement popup
-  use "nvim-lua/plenary.nvim"   -- lua helper functions
+  use "wbthomason/packer.nvim"        -- have packer manage itself
+  use "nvim-lua/popup.nvim"           -- implement popup
+  use "nvim-lua/plenary.nvim"         -- lua helper functions
 
+  -- Colorschemes
   use "folke/tokyonight.nvim"
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp"              -- the completion plugin
+  use "hrsh7th/cmp-buffer"            -- buffer completions
+  use "hrsh7th/cmp-path"              -- path completions
+  use "hrsh7th/cmp-cmdline"           -- command line completions
+  use "saadparwaiz1/cmp_luasnip"      -- snippet completions
+
+  -- snippets
+  use "L3MON4D3/LuaSnip"              -- snippet engine
+  use "rafamadriz/friendly-snippets"  -- more snippets
 
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then
