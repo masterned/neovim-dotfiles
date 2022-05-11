@@ -6,3 +6,7 @@ if not status_ok then
   return
 end
 
+require('transparent').setup {
+  enable = true,
+}
+
