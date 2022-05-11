@@ -1,29 +1,33 @@
 local function lsp_keymaps(bufnr)
-  local opts = { noremap = true, silent = true }
-
   local keymaps = {
-    ["lsp.buf"] = {
-      ["gD"]          = "declaration()",
-      ["gd"]          = "definition()",
-      ["K"]           = "hover()",
-      ["gi"]          = "implementation()",
-      ["<C-k>"]       = "signature_help()",
-      ["<leader>rn"]  = "rename()",
-      ["gr"]          = "references()",
-      ["<leader>ca"]  = "code_action()",
+    ['lsp.buf'] = {
+      ['gD']          = 'declaration()',
+      ['gd']          = 'definition()',
+      ['K']           = 'hover()',
+      ['gi']          = 'implementation()',
+      ['<C-k>']       = 'signature_help()',
+      ['<leader>rn']  = 'rename()',
+      ['gr']          = 'references()',
+      ['<leader>ca']  = 'code_action()',
     },
-    ["diagnostic"] = {
-      --["<leader>f"]   = "open_float()",
-      ["gl"]          = "open_float()",
-      ["[d"]          = "goto_prev({ border = \"rounded\" })",
-      ["]d"]          = "goto_next({ border = \"rounded\" })",
-      ["<leader>q"]   = "setloclist()",
+    ['diagnostic'] = {
+      --['<leader>f']   = 'open_float()',
+      ['gl']          = 'open_float()',
+      ['[d']          = 'goto_prev({ border = \'rounded\' })',
+      [']d']          = 'goto_next({ border = \'rounded\' })',
+      ['<leader>q']   = 'setloclist()',
     }
   }
 
   for module, keypairs in pairs(keymaps) do
     for key, method in pairs(keypairs) do
-      vim.api.nvim_buf_set_keymap(bufnr, "n", key, "<cmd>lua vim." .. module .. "." .. method .. "<CR>", opts)
+      vim.api.nvim_buf_set_keymap(
+        bufnr,
+        'n',
+        key,
+        '<cmd>lua vim.' .. module .. '.' .. method .. '<CR>',
+        { noremap = true, silent = true }
+      )
     end
   end
 
