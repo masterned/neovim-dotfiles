@@ -1,12 +1,7 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
--- shorten function name
-local keymap = vim.api.nvim_set_keymap
-
 -- set space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -53,19 +48,25 @@ local mappings =
     , ["K"] = ":move '<-2<CR>gv-gv"
     , ["<A-j>"] = ":move '>+1<CR>gv-gv"
     , ["<A-k>"] = ":move '<-2<CR>gv-gv"
-    }
-
-  , t = -- terminal
-    { ["<C-h>"] = "<C-\\><C-N><C-w>h"
-    , ["<C-j>"] = "<C-\\><C-N><C-w>j"
-    , ["<C-k>"] = "<C-\\><C-N><C-w>k"
-    , ["<C-l>"] = "<C-\\><C-N><C-w>l"
-    }
+    },
   }
 
 for mode, mapping in pairs(mappings) do
   for key, value in pairs(mapping) do
-    keymap(mode, key, value, opts)
+    vim.api.nvim_set_keymap(mode, key, value, opts)
   end
+end
+
+local term_opts = { silent = true }
+
+local terminal_mappings = {
+  ["<C-h>"] = "<C-\\><C-N><C-w>h",
+  ["<C-j>"] = "<C-\\><C-N><C-w>j",
+  ["<C-k>"] = "<C-\\><C-N><C-w>k",
+  ["<C-l>"] = "<C-\\><C-N><C-w>l",
+}
+
+for key, value in pairs(terminal_mappings) do
+  vim.api.nvim_set_keymap('t', key, value, term_opts)
 end
 
