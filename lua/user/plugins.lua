@@ -76,6 +76,9 @@ return packer.startup(function(use)
     run = ':TSUpdate',
   }
 
+  -- Autopairs
+  use 'windwp/nvim-autopairs'
+
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then
     require('packer').sync()

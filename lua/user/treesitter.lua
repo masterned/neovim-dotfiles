@@ -8,6 +8,9 @@ configs.setup {
   ignore_install = {
     '',
   },
+  autopairs = {
+    enable = true,
+  },
   highlight = {
     enable = true,
     disable = {
