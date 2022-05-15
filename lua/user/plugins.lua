@@ -83,6 +83,9 @@ return packer.startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
+  -- git
+  use 'lewis6991/gitsigns.nvim'
+
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then
     require('packer').sync()
