@@ -24,5 +24,9 @@ configs.setup {
       'yaml',
     },
   },
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = true,
+  },
 }
 

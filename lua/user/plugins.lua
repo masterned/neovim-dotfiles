@@ -79,6 +79,10 @@ return packer.startup(function(use)
   -- Autopairs
   use 'windwp/nvim-autopairs'
 
+  -- context comment string
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then
     require('packer').sync()
