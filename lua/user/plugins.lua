@@ -86,6 +86,10 @@ return packer.startup(function(use)
   -- git
   use 'lewis6991/gitsigns.nvim'
 
+  -- tree file explorer
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
+
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then
     require('packer').sync()

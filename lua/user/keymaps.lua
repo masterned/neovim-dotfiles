@@ -16,9 +16,6 @@ local modes = {
       ['<C-k>'] = '<C-w>k',
       ['<C-l>'] = '<C-w>l',
 
-      -- nav tree
-      ['<leader>e'] = ':Lex 30<CR>',
-
       -- resize w/ arrows
       ['<C-Up>']    = ':resize +2<CR>',
       ['<C-Down>']  = ':resize -2<CR>',
@@ -27,6 +24,9 @@ local modes = {
 
       ['<S-l>'] = ':bnext<CR>',
       ['<S-h>'] = ':bprevious<CR>',
+
+      -- NvimTree
+      ['<leader>e'] = ':NvimTreeToggle<CR>',
     },
   },
 
