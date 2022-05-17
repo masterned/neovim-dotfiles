@@ -1,21 +1,21 @@
 local function lsp_keymaps(bufnr)
   local keymaps = {
     ['lsp.buf'] = {
-      ['gD']          = 'declaration()',
-      ['gd']          = 'definition()',
-      ['K']           = 'hover()',
-      ['gi']          = 'implementation()',
-      ['<C-k>']       = 'signature_help()',
-      ['<leader>rn']  = 'rename()',
-      ['gr']          = 'references()',
-      ['<leader>ca']  = 'code_action()',
+      ['gD']         = 'declaration()',
+      ['gd']         = 'definition()',
+      ['K']          = 'hover()',
+      ['gi']         = 'implementation()',
+      ['<C-k>']      = 'signature_help()',
+      ['<leader>rn'] = 'rename()',
+      ['gr']         = 'references()',
+      ['<leader>ca'] = 'code_action()',
     },
     ['diagnostic'] = {
       --['<leader>f']   = 'open_float()',
-      ['gl']          = 'open_float()',
-      ['[d']          = 'goto_prev({ border = \'rounded\' })',
-      [']d']          = 'goto_next({ border = \'rounded\' })',
-      ['<leader>q']   = 'setloclist()',
+      ['gl']        = 'open_float()',
+      ['[d']        = 'goto_prev({ border = \'rounded\' })',
+      [']d']        = 'goto_next({ border = \'rounded\' })',
+      ['<leader>q'] = 'setloclist()',
     }
   }
 

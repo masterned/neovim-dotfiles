@@ -1,7 +1,7 @@
 local comment = require 'Comment'
 
 comment.setup {
-  pre_hook = function (ctx)
+  pre_hook = function(ctx)
     local U = require 'Comment.utils'
 
     local location = nil

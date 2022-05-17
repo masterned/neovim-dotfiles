@@ -34,7 +34,7 @@ local modes = {
     code = 'i',
     opts = opts,
     keymaps = {
-      ['jk'] = '<ESC>',  -- quick insert exit
+      ['jk'] = '<ESC>', -- quick insert exit
     },
   },
 
