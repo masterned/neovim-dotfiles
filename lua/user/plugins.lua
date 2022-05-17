@@ -94,6 +94,9 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'moll/vim-bbye'
 
+  -- toggleterm
+  use 'akinsho/toggleterm.nvim'
+
   -- Sync & update all packages
   if PACKER_BOOTSTRAP then
     require('packer').sync()

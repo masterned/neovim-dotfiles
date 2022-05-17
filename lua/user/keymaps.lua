@@ -74,10 +74,10 @@ local modes = {
     },
     keymaps = {
       -- better navigation
-      ['<C-h>'] = '<C-\\><C-N><C-w>h',
-      ['<C-j>'] = '<C-\\><C-N><C-w>j',
-      ['<C-k>'] = '<C-\\><C-N><C-w>k',
-      ['<C-l>'] = '<C-\\><C-N><C-w>l',
+      -- ['<C-h>'] = '<C-\\><C-N><C-w>h',
+      -- ['<C-j>'] = '<C-\\><C-N><C-w>j',
+      -- ['<C-k>'] = '<C-\\><C-N><C-w>k',
+      -- ['<C-l>'] = '<C-\\><C-N><C-w>l',
     },
   },
 }
